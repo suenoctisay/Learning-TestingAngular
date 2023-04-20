@@ -1,1 +1,15 @@
-<p>banking works!</p>
+<div>
+  <p>Hello, Suelen</p>
+</div>
+<br><br>
+<div>
+  <p>savings: {{ getSavings }}</p>
+  <input type="text" #withdraw>
+  <button (click)="setWithdraw(withdraw.value)">withdraw</button>
+</div>
+<br>
+<div>
+  <p>account: {{ getAccount }}</p>
+  <input type="text" #deposit>
+  <button (click)="setDeposit(deposit.value)">deposit</button>
+</div>
