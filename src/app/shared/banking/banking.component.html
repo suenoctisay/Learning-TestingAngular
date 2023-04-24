@@ -3,13 +3,13 @@
 </div>
 <br><br>
 <div>
-  <p>savings: {{ getSavings }}</p>
-  <input type="text" #withdraw>
-  <button (click)="setWithdraw(withdraw.value)">withdraw</button>
+  <p>savings: <span id="get-savings">{{ getSavings }}</span></p>
+  <input id="input-withdraw" type="text" #withdraw>
+  <button id="button-withdraw" (click)="setWithdraw(withdraw.value)">withdraw</button>
 </div>
-<br>
+  <br>
 <div>
-  <p>account: {{ getAccount }}</p>
-  <input type="text" #deposit>
-  <button (click)="setDeposit(deposit.value)">deposit</button>
+  <p>account: <span id="get-account">{{ getAccount }}</span></p>
+  <input id="input-deposit" type="text" #deposit>
+  <button id="button-deposit" (click)="setDeposit(deposit.value)">deposit</button>
 </div>
