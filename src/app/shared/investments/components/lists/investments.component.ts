@@ -1,3 +1,4 @@
+import { ListInvestmentsService } from './../../services/list-investments.service';
 import { Component } from '@angular/core';
 
 import { Investments } from '../../model/investments';
@@ -25,5 +26,11 @@ export class InvestmentsComponent {
       name: "Inter",
       value: 100
     },
-  ]
+  ];
+
+  constructor(private listInvestmentsService: ListInvestmentsService){}
+
+  ngOnInit(): void{
+    this.listInvestmentsService.list().subscribe( res => console.log(res));
+  }
 }
