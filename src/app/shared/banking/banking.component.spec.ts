@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { BankingComponent } from './banking.component';
 import { InvestmentsComponent } from '../investments/components/lists/investments.component';
@@ -9,14 +10,17 @@ describe('BankingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BankingComponent , InvestmentsComponent]
+      declarations: [ BankingComponent , InvestmentsComponent ],
+      imports: [ HttpClientTestingModule ]
     })
     .compileComponents();
-
-    fixture = TestBed.createComponent(BankingComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
   });
+
+    beforeEach(() => {
+      fixture = TestBed.createComponent(BankingComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+    });
 
   it('should create', () => {
     expect(component).toBeTruthy();
